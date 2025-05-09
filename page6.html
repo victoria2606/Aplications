@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>Приложения на ИИ в транспорта</title>
+    <style>
+        html {
+            min-height: 100%;
+            background-image: url('transport.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content {
+            max-width: 900px;
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 12px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .image-row img {
+            width: 200px;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .image-row img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            animation: slideUp 1.5s ease-in-out;
+        }
+
+        .buttons a {
+            padding: 14px 28px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .buttons a:hover {
+            background-color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeOut {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="content">
+    <h1>Приложения на ИИ в транспорта</h1>
+
+    <p>Изкуственият интелект в транспорта започва да се прилага още от 70-те години на миналия век. Алгоритмите анализират данни като трафик, времеви условия и пътни ограничения, за да оптимизират маршрутите и да намалят разходите.</p>
+
+    <h3>Управление на автопарка</h3>
+    <p>ИИ може да следи работата на превозните средства в реално време, да предвижда технически проблеми и да предлага превантивни мерки.</p>
+
+    <h3>Подобряване на безопасността и сигурността</h3>
+    <p>Изкуственият интелект анализира данни от сензори и камери, за да предупреждава шофьорите за потенциални опасности, което може да помогне за намаляване на инцидентите.</p>
+
+    <h3>Автомобили</h3>
+    <p>Автономните автомобили все още не са навсякъде по улиците, днешните коли използват функционалности с изкуствен интелект, сред които е навигацията. Google Maps използва изкуствен интелект за оптимизиране на маршрути и избягване на задръствания. Автомобилите на Tesla използват AI за автономно шофиране, разпознаване на пътни знаци и избягване на препятствия.</p>
+
+    <h3>Транспорт</h3>
+    <p>Изкуственият интелект може да подобри безопасността и ефективността на влаковете, като направи възможно автономното управление.</p>
+</div>
+
+<div class="image-row">
+    <img src="ai_transport1.jpg" alt="AI in Fleet Management">
+    <img src="ai_transport2.jpg" alt="AI in Autonomous Vehicles">
+    <img src="ai_transport3.jpg" alt="AI in Public Transport">
+</div>
+
+<div class="buttons">
+    <a href="page4.html">⬅ Назад</a>
+    <a href="page7.html" class="next-page">Напред ➡</a>
+</div>
+
+<script>
+    // Add a fade-out effect when navigating to the next page
+    document.querySelectorAll('.next-page').forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.body.style.animation = 'fadeOut 1s ease-in-out';
+            setTimeout(() => {
+                window.location.href = button.href;
+            }, 1000);
+        });
+    });
+</script>
+
+</body>
+</html>
